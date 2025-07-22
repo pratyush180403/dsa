@@ -1,2 +1,1 @@
-hello worldkyabe
-3444
+The LCM of4 and 12 is: 12
