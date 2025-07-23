@@ -2,19 +2,21 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Compile and run (Linux)",
+      "label": "Build & Run with input/output redirection",
       "type": "shell",
       "command": "sh",
       "args": [
         "-c",
-        "cp \"${file}\" \"${workspaceFolder}/jspwTest.cpp\" && g++ jspwTest.cpp -o jspwTest && ./jspwTest < input.txt > output.txt && rm jspwTest jspwTest.cpp"
+        "g++ \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\" < input.txt > output.txt"
       ],
       "presentation": {
-        "reveal": "never"
+        "reveal": "always",          // Show compiler errors
+        "panel": "shared",
+        "clear": true
       },
       "group": {
         "kind": "build",
-        "isDefault": true
+        "isDefault": true            // THIS makes it run on Ctrl+Shift+B
       },
       "problemMatcher": {
         "owner": "cpp",
