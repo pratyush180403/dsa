@@ -25,7 +25,7 @@ void selectionesort (int arr[] , int n){
 
 int main(){
     int n = 5;
-    int arr[] = {3 ,5 ,7 ,9  ,2};
+    int arr[] = {5,2,1,4,3};
     selectionesort(arr , n);
     printarray(arr , n);
     return 0;
